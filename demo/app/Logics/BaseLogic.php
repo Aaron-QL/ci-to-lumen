@@ -8,13 +8,11 @@
 
 namespace App\Logics;
 
-use App\Controllers\DemoController;
-
 
 class BaseLogic
 {
-    public function __construct(DemoController $c)
+    public function __construct()
     {
-        $this->c = $c;
+
     }
 }

@@ -8,7 +8,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 try {
-    \Dotenv\Dotenv::create(__DIR__ . '/ofashion_framework/')->load();
+    \Dotenv\Dotenv::create(__DIR__ . '/../')->load();
 } catch (Dotenv\Exception\InvalidPathException $e) {
     //
 }
@@ -26,7 +26,7 @@ try {
 */
 
 $app = new \OFashion\CFrame\Application(
-    realpath(__DIR__ . '/ofashion_framework/')
+    realpath(__DIR__ . '/../')
 );
 
 /*

@@ -10,7 +10,6 @@ namespace App\Controllers;
 
 
 use App\Logics\BaseLogic;
-use App\Models\BaseModel;
 use Illuminate\Http\Request;
 
 class DemoController extends BaseController
@@ -22,13 +21,6 @@ class DemoController extends BaseController
 
     public function test(Request $request)
     {
-        dd(app('App\Logics\BaseLogic')->c->l);
-        $this->singleton('a', function () {
-            return new BaseLogic(new BaseModel());
-        });
-        $this->make('a');
-        dd($this->make('a'));
-
         return $this->success();
     }
 }
