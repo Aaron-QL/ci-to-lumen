@@ -47,20 +47,14 @@
 
 4. composer install
 
-5.cp -r vendor/ofashion/cframe/demo/* .
+5.cp -r vendor/ofashion/cframe/demo/* . && mv env.example .env
 
-6.
+6. 配置env文件
+
+7. 配置nginx
 >    root /var/www/html/buyer/public;
 >
 >    location / {
 >        try_files $uri $uri/ /index.php?$query_string;
 >    }
-
-
-3.在项目根目录新建一个叫olden的文件夹，将根目录除了vendor以外的所有文件和文件夹挪进去
-
-4.将vendor/framework/demo中的所有文件和文件夹拷贝到项目根目录
-
-5.将olden中的controller、logic、model文件拷贝到app中的对应文件夹中，注意BaseController、BaseLogic、BaseModel
-
 
