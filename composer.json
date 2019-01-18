@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "OFashion\\Framework\\": "src/"
+            "OFashion\\CFrame\\": "src/"
         },
         "files": [
             "src/helpers.php"
