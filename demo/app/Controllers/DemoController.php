@@ -6,10 +6,10 @@
  * Time: 16:03
  */
 
-namespace App\Controllers;
+namespace Demo\Controllers;
 
 
-use App\Logics\BaseLogic;
+use Demo\Logics\BaseLogic;
 use Illuminate\Http\Request;
 
 class DemoController extends BaseController

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace Demo\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;

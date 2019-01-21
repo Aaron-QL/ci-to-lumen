@@ -6,7 +6,7 @@
  * Time: 15:01
  */
 
-namespace App\Logics;
+namespace Demo\Logics;
 
 
 class BaseLogic

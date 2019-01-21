@@ -6,7 +6,7 @@
  * Time: 15:04
  */
 
-namespace App\Models;
+namespace Demo\Models;
 
 class BaseModel
 {
