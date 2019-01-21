@@ -79,7 +79,7 @@ class Application extends Container
     public $router;
 
     /**
-     * Create a new Lumen application instance.
+     * Create a new CFrame application instance.
      *
      * @param  string|null  $basePath
      * @return void

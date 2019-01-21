@@ -14,7 +14,7 @@ use Illuminate\Contracts\Support\Responsable;
 use OFashion\CFrame\Http\Request as OFashionRequest;
 use OFashion\CFrame\Routing\Closure as RoutingClosure;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use OFashion\CFrame\Routing\Controller as LumenController;
+use OFashion\CFrame\Routing\Controller as CFrameController;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
@@ -312,8 +312,8 @@ trait RoutesRequests
             throw new NotFoundHttpException;
         }
 
-        if ($instance instanceof LumenController) {
-            return $this->callLumenController($instance, $method, $routeInfo);
+        if ($instance instanceof CFrameController) {
+            return $this->callCFrameController($instance, $method, $routeInfo);
         } else {
             return $this->callControllerCallable(
                 [$instance, $method], $routeInfo[2]
@@ -322,19 +322,19 @@ trait RoutesRequests
     }
 
     /**
-     * Send the request through a Lumen controller.
+     * Send the request through a CFrame controller.
      *
      * @param  mixed  $instance
      * @param  string  $method
      * @param  array  $routeInfo
      * @return mixed
      */
-    protected function callLumenController($instance, $method, $routeInfo)
+    protected function callCFrameController($instance, $method, $routeInfo)
     {
         $middleware = $instance->getMiddlewareForMethod($method);
 
         if (count($middleware) > 0) {
-            return $this->callLumenControllerWithMiddleware(
+            return $this->callCFrameControllerWithMiddleware(
                 $instance, $method, $routeInfo, $middleware
             );
         } else {
@@ -353,7 +353,7 @@ trait RoutesRequests
      * @param  array  $middleware
      * @return mixed
      */
-    protected function callLumenControllerWithMiddleware($instance, $method, $routeInfo, $middleware)
+    protected function callCFrameControllerWithMiddleware($instance, $method, $routeInfo, $middleware)
     {
         $middleware = $this->gatherMiddlewareClassNames($middleware);
 
