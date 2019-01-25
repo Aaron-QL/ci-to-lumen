@@ -133,7 +133,7 @@ class Application extends Container
      */
     public function version()
     {
-        return 'OFashion/CFrame (1.0.0)';
+        return '<h1>OFashion/CFrame (1.0.0)</h1><p>A fucking awesome PHP framework born for Backend Artisans.</p>';
     }
 
     /**

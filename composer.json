@@ -1,6 +1,6 @@
 {
     "name": "ofashion/cframe",
-    "description": "A niubility PHP framework for Backend Artisans.",
+    "description": "A fucking awesome PHP framework born for Backend Artisans.",
     "require": {
         "php": ">=7.1.3",
         "doctrine/dbal": "^2.9",
