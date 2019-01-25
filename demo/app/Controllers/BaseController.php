@@ -35,4 +35,14 @@ class BaseController extends Controller
         ];
         throw new ValidationException($validator, $response);
     }
+
+    protected function getGetData()
+    {
+        //@todo
+    }
+
+    protected function getPostData()
+    {
+        //@todo
+    }
 }

@@ -6,7 +6,7 @@
  * Time: 16:36
  */
 
-namespace src\Concerns;
+namespace OFashion\CFrame\Concerns;
 
 
 trait ContainerProxy
