@@ -7,49 +7,13 @@
 
 2.mkdir olden && ls | grep -v olden | xargs -I {} mv {} olden
 
-3.
-```json
-{
-    "name": "ofashion/buyer",
-    "description": "buyer API",
-    "license": "MIT",
-    "type": "project",
-    "require": {
-        "php": ">=7.1.3",
-        "ofashion/cframe": "dev-master"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.ofashion.com.cn"
-        }
-    ],
-    "require-dev": {
-        "symfony/var-dumper": "^4.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        },
-        "files": [
-            "app/Helper/helper.php"
-        ]
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
-    "config": {
-        "sort-packages": true,
-        "optimize-autoloader": true
-    }
-}
+3.cp -r vendor/ofashion/cframe/demo/* . && mv env.example .env && mv composer.json.example composer.json
+ 
+4.Demo => App
 
-```
+5.修改composer.json 然后 composer install
 
-4. composer install
-
-5.cp -r vendor/ofashion/cframe/demo/* . && mv env.example .env
-
-6. 配置env文件
+6.配置env文件
 
 7. 配置nginx
 >    root /var/www/html/buyer/public;
@@ -58,3 +22,9 @@
 >        try_files $uri $uri/ /index.php?$query_string;
 >    }
 
+8.IDE language level
+
+
+注意事项：
+类名转大驼峰
+success和failed的结构

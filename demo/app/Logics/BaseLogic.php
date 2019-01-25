@@ -9,10 +9,9 @@
 namespace Demo\Logics;
 
 
+use src\Concerns\ContainerProxy;
+
 class BaseLogic
 {
-    public function __construct()
-    {
-
-    }
+    use ContainerProxy;
 }

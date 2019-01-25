@@ -4,9 +4,13 @@ namespace Demo\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use OFashion\CFrame\Routing\Controller;
+use src\Concerns\ContainerProxy;
 
-class BaseController
+class BaseController extends Controller
 {
+    use ContainerProxy;
+
     public function failed(string $msg = 'failed', array $data = [], int $code = 400)
     {
         return $this->success($data, $msg, $code);

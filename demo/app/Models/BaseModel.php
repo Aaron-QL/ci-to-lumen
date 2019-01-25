@@ -8,10 +8,9 @@
 
 namespace Demo\Models;
 
+use src\Concerns\ContainerProxy;
+
 class BaseModel
 {
-    public function __construct()
-    {
-
-    }
+    use ContainerProxy;
 }
